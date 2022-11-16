@@ -1,5 +1,11 @@
 partial class Program
 {
+    /// <summary>
+    /// Writes the times tables based on the number and size.
+    /// E.g. 5, 5 would do 5x1, 5x2 ... 5x5
+    /// </summary>
+    /// <param name="number">Number to multiply.</param>
+    /// <param name="size">Size of times table.</param>
     static void TimesTable(byte number, byte size = 12)
     {
         WriteLine($"This is the {number} times table with {size} rows:");
@@ -10,6 +16,12 @@ partial class Program
         WriteLine();
     }
 
+    /// <summary>
+    /// Calculates tax based on amount and region.
+    /// </summary>
+    /// <param name="amount">Decimal amount of money i.e 4.66.</param>
+    /// <param name="twoLetterRegionCode">Two-letter region code, i.e. PA.</param>
+    /// <returns></returns>
     static decimal CalculateTax(decimal amount, string twoLetterRegionCode)
     {
         decimal rate = twoLetterRegionCode switch
@@ -56,6 +68,9 @@ partial class Program
         };
     }
 
+    /// <summary>
+    /// Runs CardinalToOrdinal() 1500 times.
+    /// </summary>
     static void RunCardinalToOrdinal()
     {
         for (int number = 1; number <= 1500; number++)
@@ -65,6 +80,11 @@ partial class Program
         WriteLine();
     }
 
+    /// <summary>
+    /// Returns a factorial for non-negative numbers recursively.
+    /// </summary>
+    /// <param name="number">Number to get the factorial of.</param>
+    /// <returns>Integer of factorial.</returns>
     static int Factorial(int number)
     {
         if (number < 0)
@@ -86,6 +106,9 @@ partial class Program
         }
     }
 
+    /// <summary>
+    /// Runs Factorial for the first 15 numbers.
+    /// </summary>
     static void RunFactorial()
     {
         for (int i = -2; i <= 15; i++)
@@ -105,6 +128,11 @@ partial class Program
         }
     }
 
+    /// <summary>
+    /// The fibonacci sequence using imperative style.
+    /// </summary>
+    /// <param name="term">Integer of terms to run.</param>
+    /// <returns>Fibonacci of the supplied term.</returns>
     static int FibImperative(int term)
     {
         if (term == 1)
@@ -121,6 +149,9 @@ partial class Program
         }
     }
 
+    /// <summary>
+    /// Runs FibImperative for 30 numbers.
+    /// </summary>
     static void RunFibImperative()
     {
         for (int i = 1; i <= 30; i++)
@@ -131,6 +162,11 @@ partial class Program
         }
     }
 
+    /// <summary>
+    /// The fibonacci sequence using declarative style
+    /// </summary>
+    /// <param name="term">Integer of term to run</param>
+    /// <returns>Fibonacci of the supplied term.</returns>
     static int FibFunctional(int term) =>
         term switch
         {
@@ -138,7 +174,10 @@ partial class Program
             2 => 1,
             _ => FibFunctional(term - 1) + FibFunctional(term - 2)
         };
-    
+
+    /// <summary>
+    /// Runs FibFunctional for 30 numbers.
+    /// </summary>
     static void RunFibFunctional()
     {
         for (int i = 1; i <= 30; i++)
