@@ -1,0 +1,6 @@
+Debug says, I am watching!
+Trace says, I am watching!
+Trace error
+Trace warning
+[C:\Users\beef_\Desktop\review book 2\Chapter04\Instrumenting\Program.cs]
+  <Main>$ on line 41. Expression:unitsInStock > 10
