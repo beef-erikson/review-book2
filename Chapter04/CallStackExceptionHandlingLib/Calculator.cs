@@ -1,7 +1,7 @@
 ﻿namespace CallStackExceptionHandlingLib;
 public class Calculator
 {
-    public static void Gamme() // public so it can be called from outside
+    public static void Gamma() // public so it can be called from outside
     {
         WriteLine("In Gamma");
         Delta();
