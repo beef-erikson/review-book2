@@ -8,7 +8,7 @@ WriteLine($"a | b = {a | b}"); // 8, 4, and 2-bit columns e.g. 00001110
 WriteLine($"a ^ b = {a ^ b}"); // 8 and 4-bit columns e.g. 00001100
 
 WriteLine();
-//01010000 Left-shift a by three columns
+//01010000 Left-shift a by three columns (a * 8)
 WriteLine($"a << 3 = {a << 3}");
 // multiple a by 8
 WriteLine($"a * 8 = {a * 8}");
