@@ -13,13 +13,17 @@ static class PrimeFactors
 
         for (int i = 2; i <= num; i++)
         {
-            // find out if divisable evenly. If so, add to string
+            // find out if divisable evenly. If so, add to string and, if not evenly divisable, recurse
             if (i % num == 0)
             {
                 response += $"{i} ";
+                if (i / num != 0)
+                {
+                    PrimeFactors(i / num);
+                }
             }
-        }
 
-        return response;
+            return response;
+        }
     }
 }
