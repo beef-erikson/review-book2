@@ -1,10 +1,10 @@
 ﻿namespace Ch04Ex02PrimeFactorsLib;
 static class PrimeFactors
 {
+    string response = "";
+
     static string PrimeFactors(int num)
     {
-        string response = "";
-
         // Invalid number range
         if (num > 1000 || num < 2)
         {
@@ -17,7 +17,7 @@ static class PrimeFactors
             if (i % num == 0)
             {
                 response += $"{i} ";
-                if (i / num != 0)
+                if (i / num != 1)
                 {
                     PrimeFactors(i / num);
                 }
