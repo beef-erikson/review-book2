@@ -20,6 +20,7 @@ static class PrimeFactors
                 if (i / num != 1)
                 {
                     PrimeFactors(i / num);
+		    Console.WriteLine("yep.");
                 }
             }
 
